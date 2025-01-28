@@ -6,10 +6,33 @@ header, section, footer{
   @apply lg:px-16 md:px-10 px-4 max-w-[100dvw] w-full lg:py-10 md:py-8 py-5;
 }
 
+body{
+  @apply overflow-x-hidden ;
+}
+
+
 .link > span{
   transform: scale(0);
 }
 
 .link:hover > span{
   transform: scaleX(100%);
+}
+
+@keyframes sideWave{
+  0%{
+    transform: translateX(-25%);
+  }
+  25%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(25%);
+  }
+  75%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-25%);
+  }
 }

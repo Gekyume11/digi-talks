@@ -2,20 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+header, section, footer{
+  @apply lg:px-16 md:px-10 px-4 max-w-[100dvw] w-full lg:py-10 md:py-8 py-5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.link > span{
+  transform: scale(0);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.link:hover > span{
+  transform: scaleX(100%);
 }
